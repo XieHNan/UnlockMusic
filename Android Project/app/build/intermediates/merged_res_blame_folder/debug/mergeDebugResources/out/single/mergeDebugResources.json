@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/layout_layout_player_bar.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/layout/layout_player_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\layout_layout_player_bar.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\layout\\layout_player_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_bg_play_btn.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\bg_play_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_bg_btn_outline.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\bg_btn_outline.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/drawable_bg_upload_icon.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/drawable/bg_upload_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_bg_status_dot.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\bg_status_dot.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\layout_item_music_file.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\layout\\item_music_file.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\layout_dialog_settings.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\layout\\dialog_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_bg_upload_icon.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\bg_upload_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_bg_btn_primary.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\bg_btn_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_bg_card_white.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\bg_card_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_bg_music_icon.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\bg_music_icon.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/layout_item_music_file.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/layout/item_music_file.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/drawable_bg_card.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/layout_dialog_settings.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/layout/dialog_settings.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/drawable_bg_icon_button.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/drawable/bg_icon_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_bg_settings_btn.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\bg_settings_btn.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/layout_activity_main.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/drawable_bg_swatch_selector.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/drawable/bg_swatch_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-debug-38:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\XieiQ\\.gradle\\daemon\\8.7\\com.unlockmusic.android.app-main-40:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/drawable_bg_music_icon.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/drawable/bg_music_icon.xml"
+    },
+    {
+        "merged": "com.unlockmusic.android.app-debug-38:/drawable_bg_swatch_fill.xml.flat",
+        "source": "com.unlockmusic.android.app-main-40:/drawable/bg_swatch_fill.xml"
+    }
+]

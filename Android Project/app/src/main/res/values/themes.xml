@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ============ 基础主题：Material3 + 沉浸式 Edge-to-Edge ============ -->
+    <style name="Theme.UnlockMusic" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- 中性色（Primer 灰阶） -->
+        <item name="android:colorBackground">@color/bg_page</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/bg_inset</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/border_color</item>
+        <item name="colorOutlineVariant">@color/bg_divider</item>
+
+        <!-- 默认主色（蓝色种子，会被 ThemeOverlay 覆盖） -->
+        <item name="colorPrimary">@color/seed_06</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_06</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+
+        <!-- 沉浸式：透明状态栏/导航栏，刘海屏延伸 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="q">false</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+    </style>
+
+    <!-- ============ 15 个种子色覆盖层（运行时 applyStyle 应用） ============ -->
+    <style name="ThemeOverlay.UMusic.Seed01" parent="">
+        <item name="colorPrimary">@color/seed_01</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_01</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed02" parent="">
+        <item name="colorPrimary">@color/seed_02</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_02</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed03" parent="">
+        <item name="colorPrimary">@color/seed_03</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_03</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed04" parent="">
+        <item name="colorPrimary">@color/seed_04</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_04</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed05" parent="">
+        <item name="colorPrimary">@color/seed_05</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_05</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed06" parent="">
+        <item name="colorPrimary">@color/seed_06</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_06</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed07" parent="">
+        <item name="colorPrimary">@color/seed_07</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_07</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed08" parent="">
+        <item name="colorPrimary">@color/seed_08</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_08</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed09" parent="">
+        <item name="colorPrimary">@color/seed_09</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_09</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed10" parent="">
+        <item name="colorPrimary">@color/seed_10</item>
+        <item name="colorOnPrimary">@color/on_seed_light</item>
+        <item name="colorPrimaryContainer">@color/seed_10</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_light</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed11" parent="">
+        <item name="colorPrimary">@color/seed_11</item>
+        <item name="colorOnPrimary">@color/on_seed_light</item>
+        <item name="colorPrimaryContainer">@color/seed_11</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_light</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed12" parent="">
+        <item name="colorPrimary">@color/seed_12</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_12</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed13" parent="">
+        <item name="colorPrimary">@color/seed_13</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_13</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed14" parent="">
+        <item name="colorPrimary">@color/seed_14</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_14</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+    </style>
+    <style name="ThemeOverlay.UMusic.Seed15" parent="">
+        <item name="colorPrimary">@color/seed_15</item>
+        <item name="colorOnPrimary">@color/on_seed_light</item>
+        <item name="colorPrimaryContainer">@color/seed_15</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_light</item>
+    </style>
+
+</resources>

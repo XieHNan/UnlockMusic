@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 暗色模式：状态栏/导航栏图标变亮 -->
+    <style name="Theme.UnlockMusic" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/bg_page</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/bg_inset</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/border_color</item>
+        <item name="colorOutlineVariant">@color/bg_divider</item>
+
+        <item name="colorPrimary">@color/seed_06</item>
+        <item name="colorOnPrimary">@color/on_seed_dark</item>
+        <item name="colorPrimaryContainer">@color/seed_06</item>
+        <item name="colorOnPrimaryContainer">@color/on_seed_dark</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="q">false</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+    </style>
+
+</resources>
