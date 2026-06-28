@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ============ 主题色 ============ -->
+        <LinearLayout
+            style="@style/Widget.UMusic.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_theme_color"
+                android:textAppearance="@style/TextAppearance.UMusic.SectionTitle" />
+
+            <android.widget.GridLayout
+                android:id="@+id/grid_colors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="center_horizontal"
+                android:columnCount="5"
+                android:rowCount="3"
+                android:useDefaultMargins="true">
+
+                <FrameLayout android:tag="0" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_01" />
+                </FrameLayout>
+                <FrameLayout android:tag="1" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_02" />
+                </FrameLayout>
+                <FrameLayout android:tag="2" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_03" />
+                </FrameLayout>
+                <FrameLayout android:tag="3" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_04" />
+                </FrameLayout>
+                <FrameLayout android:tag="4" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_05" />
+                </FrameLayout>
+                <FrameLayout android:tag="5" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_06" />
+                </FrameLayout>
+                <FrameLayout android:tag="6" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_07" />
+                </FrameLayout>
+                <FrameLayout android:tag="7" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_08" />
+                </FrameLayout>
+                <FrameLayout android:tag="8" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_09" />
+                </FrameLayout>
+                <FrameLayout android:tag="9" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_10" />
+                </FrameLayout>
+                <FrameLayout android:tag="10" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_11" />
+                </FrameLayout>
+                <FrameLayout android:tag="11" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_12" />
+                </FrameLayout>
+                <FrameLayout android:tag="12" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_13" />
+                </FrameLayout>
+                <FrameLayout android:tag="13" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_14" />
+                </FrameLayout>
+                <FrameLayout android:tag="14" style="@style/Widget.UMusic.Swatch">
+                    <View style="@style/Widget.UMusic.SwatchColor" android:backgroundTint="@color/seed_15" />
+                </FrameLayout>
+            </android.widget.GridLayout>
+        </LinearLayout>
+
+        <!-- ============ 输出路径 ============ -->
+        <LinearLayout
+            style="@style/Widget.UMusic.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_output_path"
+                android:textAppearance="@style/TextAppearance.UMusic.SectionTitle" />
+
+            <RadioGroup
+                android:id="@+id/rg_output_path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp">
+
+                <RadioButton
+                    android:id="@+id/rb_downloads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_downloads"
+                    android:textAppearance="@style/TextAppearance.UMusic.Label"
+                    android:paddingVertical="6dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_music"
+                    android:textAppearance="@style/TextAppearance.UMusic.Label"
+                    android:paddingVertical="6dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_custom"
+                    android:textAppearance="@style/TextAppearance.UMusic.Label"
+                    android:paddingVertical="6dp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/layout_custom_path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="6dp">
+
+                <EditText
+                    android:id="@+id/et_custom_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/settings_custom_hint"
+                    android:textAppearance="@style/TextAppearance.UMusic.Caption"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/bg_card" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ============ 同名文件处理 ============ -->
+        <LinearLayout
+            style="@style/Widget.UMusic.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_duplicate"
+                android:textAppearance="@style/TextAppearance.UMusic.SectionTitle" />
+
+            <RadioGroup
+                android:id="@+id/rg_duplicate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp">
+
+                <RadioButton
+                    android:id="@+id/rb_copy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_duplicate_copy"
+                    android:textAppearance="@style/TextAppearance.UMusic.Label"
+                    android:paddingVertical="6dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_overwrite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_duplicate_overwrite"
+                    android:textAppearance="@style/TextAppearance.UMusic.Label"
+                    android:paddingVertical="6dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- ============ 批量导出命名 ============ -->
+        <LinearLayout
+            style="@style/Widget.UMusic.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_naming"
+                android:textAppearance="@style/TextAppearance.UMusic.SectionTitle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_naming_hint"
+                android:textAppearance="@style/TextAppearance.UMusic.Caption"
+                android:layout_marginTop="4dp" />
+
+            <EditText
+                android:id="@+id/et_naming_pattern"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/settings_naming_default"
+                android:textAppearance="@style/TextAppearance.UMusic.Caption"
+                android:paddingHorizontal="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

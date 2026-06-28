@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/Widget.UMusic.Card.Item"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- 文件图标 -->
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="14dp">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_music_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="♪"
+                android:textSize="18sp"
+                android:textColor="?attr/colorPrimary" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_filename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_pending"
+                android:textAppearance="@style/TextAppearance.UMusic.Body"
+                android:ellipsize="end"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_pending"
+                android:textAppearance="@style/TextAppearance.UMusic.Caption"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- 状态指示点 -->
+        <View
+            android:id="@+id/status_indicator"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_status_dot" />
+
+        <!-- 播放按钮 -->
+        <TextView
+            android:id="@+id/btn_play"
+            style="@style/Widget.UMusic.IconButton"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            android:text="▶"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnPrimary" />
+
+        <!-- 保存按钮 -->
+        <TextView
+            android:id="@+id/btn_save"
+            style="@style/Widget.UMusic.IconButton"
+            android:visibility="gone"
+            android:text="⬇"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnPrimary" />
+    </LinearLayout>
+</LinearLayout>

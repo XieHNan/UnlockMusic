@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============ Primer 灰阶（暗色语义） ============ -->
+    <color name="text_primary">#FFFBFBFC</color>
+    <color name="text_regular">#FFBFC1C9</color>
+    <color name="text_secondary">#FF9194A1</color>
+    <color name="text_placeholder">#FF525560</color>
+    <color name="text_white">#FFFFFFFF</color>
+
+    <color name="bg_page">#FF050505</color>
+    <color name="bg_card">#FF17181C</color>
+    <color name="bg_elevated">#FF1F1F24</color>
+    <color name="bg_inset">#FF2E2F37</color>
+    <color name="bg_divider">#FF2E2F37</color>
+    <color name="border_color">#FF41434E</color>
+
+    <color name="icon_primary">#FFBFC1C9</color>
+    <color name="icon_secondary">#FF6C6F7E</color>
+
+    <!-- ============ 状态色（暗色） ============ -->
+    <color name="status_success">#FF32B24F</color>
+    <color name="status_error">#FFE04352</color>
+    <color name="status_warning">#FFF66A0A</color>
+
+    <!-- 暗色下兼容旧引用 -->
+    <color name="blue">#FF2196F3</color>
+    <color name="green">#FF32B24F</color>
+    <color name="red">#FFE04352</color>
+    <color name="gray">#FF9194A1</color>
+    <color name="orange">#FFF66A0A</color>
+</resources>

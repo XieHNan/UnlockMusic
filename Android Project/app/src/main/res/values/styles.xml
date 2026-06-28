@@ -97,4 +97,9 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <!-- 设置对话框圆角背景 -->
+    <style name="Theme.UMusic.SettingsDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+    </style>
+
 </resources>

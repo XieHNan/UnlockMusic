@@ -11,6 +11,9 @@
     <string name="btn_save_all">全部保存</string>
     <string name="settings_title">设置</string>
     <string name="settings_theme_color">主题色</string>
+    <string name="settings_file_manager">文件管理器</string>
+    <string name="settings_file_manager_documents">原生 DocumentsUI</string>
+    <string name="settings_file_manager_system">系统文件选择器（推荐）</string>
     <string name="settings_output_path">输出路径设置</string>
     <string name="settings_downloads">下载目录 (Downloads/UnlockMusic)</string>
     <string name="settings_music">音乐目录 (Music/UnlockMusic)</string>

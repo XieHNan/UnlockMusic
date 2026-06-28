@@ -14,6 +14,7 @@ import android.os.Looper
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.Toast
@@ -57,13 +58,34 @@ class MainActivity : AppCompatActivity() {
     private var folderNamePattern = ""
     private var seedIndex = 5  // 默认蓝色 (seed_06)
     private var lastSaveTime = 0L  // 保存冷却时间（1秒）
+    private var fileManagerType = "system"  // 文件管理器: system / documents
 
-    // 文件选择（与 KernelSU 完全一致：ACTION_GET_CONTENT + application/octet-stream）
+    // 文件选择器（支持多选 + 可配置类型）
     private val filePicker = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
-            result.data?.data?.let { addFile(it) }
+            val uris = mutableListOf<Uri>()
+            result.data?.data?.let { uris.add(it) }
+            result.data?.clipData?.let { for (i in 0 until it.itemCount) uris.add(it.getItemAt(i).uri) }
+            uris.forEach { addFile(it) }
             refreshList()
         }
+    }
+
+    private fun openFilePicker() {
+        val intent = if (fileManagerType == "documents") {
+            // 与 KernelSU 完全一致：ACTION_GET_CONTENT + application/octet-stream，仅增加了多选
+            Intent(Intent.ACTION_GET_CONTENT).apply {
+                type = "application/octet-stream"
+                putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+            }
+        } else {
+            // 系统文件选择器：*/* 会交给手机 OS，小米设备上会调起小米文件管理器
+            Intent(Intent.ACTION_GET_CONTENT).apply {
+                type = "*/*"
+                putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+            }
+        }
+        filePicker.launch(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,9 +117,9 @@ class MainActivity : AppCompatActivity() {
         adapter.onRename = { file, name -> file.displayName = name; adapter.submitList(musicFiles.toList()); toast(getString(R.string.toast_renamed, name)) }
         adapter.onRemove = { file -> musicFiles.remove(file); refreshList(); toast(R.string.toast_removed) }
 
-        binding.btnSelect.setOnClickListener { filePicker.launch(Intent(Intent.ACTION_GET_CONTENT).apply { type = "application/octet-stream" }) }
+        binding.btnSelect.setOnClickListener { openFilePicker() }
         binding.btnSaveAll.setOnClickListener { saveAll() }
-        binding.layoutEmpty.setOnClickListener { filePicker.launch(Intent(Intent.ACTION_GET_CONTENT).apply { type = "application/octet-stream" }) }
+        binding.layoutEmpty.setOnClickListener { openFilePicker() }
         binding.btnSettings.setOnClickListener { showSettingsDialog() }
 
         initPlayerBar()
@@ -453,6 +475,7 @@ class MainActivity : AppCompatActivity() {
             "custom" -> { db.rgOutputPath.check(R.id.rb_custom); db.layoutCustomPath.visibility = View.VISIBLE; db.etCustomPath.setText(customOutputPath) }
             else -> db.rgOutputPath.check(R.id.rb_downloads)
         }
+        db.rgFileManager.check(if (fileManagerType == "system") R.id.rb_fm_system else R.id.rb_fm_documents)
         db.rgDuplicate.check(if (duplicateStrategy == "overwrite") R.id.rb_overwrite else R.id.rb_copy)
         db.rgOutputPath.setOnCheckedChangeListener { _, id -> db.layoutCustomPath.visibility = if (id == R.id.rb_custom) View.VISIBLE else View.GONE }
         db.etNamingPattern.setText(folderNamePattern.ifEmpty { getString(R.string.settings_naming_default) })
@@ -469,7 +492,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(this, R.style.Theme_UMusic_SettingsDialog)
             .setTitle(R.string.settings_title)
             .setView(db.root)
             .setPositiveButton(R.string.settings_save) { _, _ ->
@@ -482,6 +505,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     else -> "downloads"
                 }
+                fileManagerType = if (db.rgFileManager.checkedRadioButtonId == R.id.rb_fm_system) "system" else "documents"
                 duplicateStrategy = if (db.rgDuplicate.checkedRadioButtonId == R.id.rb_overwrite) "overwrite" else "copy"
                 folderNamePattern = db.etNamingPattern.text.toString().trim()
                 val oldSeed = seedIndex
@@ -491,7 +515,23 @@ class MainActivity : AppCompatActivity() {
                 if (seedIndex != oldSeed) recreate()
             }
             .setNegativeButton(R.string.settings_cancel, null)
-            .show()
+            .create()
+        // 限制对话框最大高度为屏幕 80%，宽度为屏幕 90%，确保底部圆角可见
+        dialog.setOnShowListener {
+            val maxH = (resources.displayMetrics.heightPixels * 0.9).toInt()
+            val maxW = (resources.displayMetrics.widthPixels * 0.9).toInt()
+            dialog.window?.let { window ->
+                window.setLayout(maxW, ViewGroup.LayoutParams.WRAP_CONTENT)
+                // 如果内容超过最大高度，限制高度
+                window.decorView.post {
+                    val currentH = window.decorView.height
+                    if (currentH > maxH) {
+                        window.setLayout(maxW, maxH)
+                    }
+                }
+            }
+        }
+        dialog.show()
     }
 
     /** 种子色 ThemeOverlay 资源映射 */
@@ -523,6 +563,7 @@ class MainActivity : AppCompatActivity() {
             duplicateStrategy = getString(KEY_DUP, "copy") ?: "copy"
             folderNamePattern = getString(KEY_NAMING, "") ?: ""
             seedIndex = getInt(KEY_SEED, 5).coerceIn(0, 14)
+            fileManagerType = getString(KEY_FM, "system") ?: "system"
         }
     }
 
@@ -533,6 +574,7 @@ class MainActivity : AppCompatActivity() {
             .putString(KEY_DUP, duplicateStrategy)
             .putString(KEY_NAMING, folderNamePattern)
             .putInt(KEY_SEED, seedIndex)
+            .putString(KEY_FM, fileManagerType)
             .apply()
     }
 
@@ -568,5 +610,6 @@ class MainActivity : AppCompatActivity() {
         private const val KEY_DUP = "duplicate_strategy"
         private const val KEY_NAMING = "folder_name_pattern"
         private const val KEY_SEED = "seed_index"
+        private const val KEY_FM = "file_manager"
     }
 }
